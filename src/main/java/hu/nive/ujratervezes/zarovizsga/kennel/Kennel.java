@@ -21,5 +21,26 @@ public class Kennel {
         }
     }
 
+    public Dog findByName(String name) {
+        for (Dog dog : dogs) {
+            if (dog.getName().equals(name)) {
+                return dog;
+            }
+        }
+        throw new IllegalArgumentException("Wrong name");
+    }
 
+    public void playWith(String name, int hours) {
+        findByName(name).play(hours);
+    }
+
+    public List<String> getHappyDogNames(int minHappiness) {
+        List<String> result = new ArrayList<>();
+        for (Dog dog : dogs) {
+            if (dog.getHappiness() > minHappiness) {
+                result.add(dog.getName());
+            }
+        }
+        return result;
+    }
 }
