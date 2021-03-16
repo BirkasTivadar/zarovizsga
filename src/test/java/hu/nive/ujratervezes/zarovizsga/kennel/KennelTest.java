@@ -1,12 +1,15 @@
 package hu.nive.ujratervezes.zarovizsga.kennel;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class KennelTest {
     Kennel kennel = new Kennel();
-/*
+
     @BeforeEach
     void init() {
         Beagle beagle = new Beagle("Bigli");
@@ -30,7 +33,7 @@ class KennelTest {
         assertEquals(2, kennel.getDogs().get(0).getHappiness());
         assertEquals(4, kennel.getDogs().get(1).getHappiness());
     }
-
+/*
     @Test
     void testFindByName() {
         Dog dog = kennel.findByName("Morzsi");
