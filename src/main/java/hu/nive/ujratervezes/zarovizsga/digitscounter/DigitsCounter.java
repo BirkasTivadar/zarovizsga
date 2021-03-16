@@ -11,7 +11,7 @@ public class DigitsCounter {
         }
         Set<Character> result = new HashSet<>();
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) > 47 && s.charAt(i) < 57) {
+            if (s.charAt(i) > 47 && s.charAt(i) < 58) {
                 result.add(s.charAt(i));
             }
         }
@@ -21,4 +21,5 @@ public class DigitsCounter {
     private boolean isEmpty(String str){
         return (str == null || str.isBlank());
     }
+
 }
