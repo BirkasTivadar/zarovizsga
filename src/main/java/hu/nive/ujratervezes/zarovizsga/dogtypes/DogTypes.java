@@ -17,7 +17,6 @@ public class DogTypes {
     }
 
     public List<String> getDogsByCountry(String country) {
-        List<String> result = new ArrayList<>();
         try (
                 Connection conn = dataSource.getConnection();
                 PreparedStatement ps = conn.prepareStatement("SELECT `name` FROM dog_types WHERE country = ? ORDER BY `name`;")

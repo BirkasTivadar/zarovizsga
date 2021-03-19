@@ -8,7 +8,7 @@ import java.nio.file.Path;
 public class WorkHours {
 
     public String minWork(String file) {
-        String result = null;
+        String result;
         Path path = Path.of(file);
         try (BufferedReader br = Files.newBufferedReader(path)) {
             result = getString(br);
