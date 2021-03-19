@@ -5,8 +5,8 @@ import java.util.Set;
 
 public class DigitsCounter {
 
-    public int getCountOfDigits(String s){
-        if(isEmpty(s)){
+    public int getCountOfDigits(String s) {
+        if (isBlankOrNull(s)) {
             return 0;
         }
         Set<Character> result = new HashSet<>();
@@ -18,7 +18,7 @@ public class DigitsCounter {
         return result.size();
     }
 
-    private boolean isEmpty(String str){
+    private boolean isBlankOrNull(String str) {
         return (str == null || str.isBlank());
     }
 }
